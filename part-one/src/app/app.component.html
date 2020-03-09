@@ -1,0 +1,10 @@
+<h1>Hello World</h1>
+
+<p>{{ title }}</p>
+<p>{{ date | date:'medium' }}</p>
+
+<div *ngIf="showContent">
+    <p>This content is hidden</p>
+</div>
+
+<button (click)="toggleContent()">{{ showContent ? 'Hide' : 'Show' }} Content</button>
