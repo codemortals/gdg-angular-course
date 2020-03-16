@@ -1,8 +1,19 @@
 
 <h1>Hello GDG Cloud London</h1>
 
-<app-toggle-button [showContent]="false">Eddie you need to do more work</app-toggle-button>
+<form [formGroup]="addForm" (submit)="addName()">
+    <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name">
 
-<app-toggle-button [showContent]="true">Andrew you need to stream online more</app-toggle-button>
+    <button type="submit">Add</button>
+</form>
 
-<app-toggle-button [showContent]="true">Everyone learning with us, need to show us their homework</app-toggle-button>
+<form [formGroup]="searchForm">
+
+    <label for="search">Search</label>
+    <input id="search" type="text" formControlName="search">
+</form>
+
+<mat-list>
+  <mat-list-item *ngFor="let item of filteredData">{{ item }}</mat-list-item>
+</mat-list>
