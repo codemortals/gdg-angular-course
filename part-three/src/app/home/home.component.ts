@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.addForm = this.forms.group({
-      name: []
+      name: [undefined, [ Validators.required ]],
     });
 
     this.searchForm = this.forms.group({
@@ -50,5 +50,6 @@ export class HomeComponent implements OnInit {
   public addName(): void {
     this.data = [this.addForm.get('name').value, ...this.data];
     this.performSearch();
+    this.addForm.reset();
   }
 }
