@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <div>Welcome</div>
+    <div class="nav-space"></div>
+    <div>
+        <a [routerLink]="['/']">Home</a>
+        <a [routerLink]="['/', 'contact']">Contact</a>
+    </div>
+</mat-toolbar>
+
+<div class="wrapper">
+    <mat-card>
+        <router-outlet></router-outlet>
+    </mat-card>
+</div>

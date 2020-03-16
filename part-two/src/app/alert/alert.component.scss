@@ -1,0 +1,22 @@
+p {
+    font-size: 3em;
+    line-height: 1.2;
+    margin: 0.5em 0;
+    border-radius: 10px;
+    padding: 0.2em;
+
+    &.error {
+        color: #ff0000;
+        background-color: lighten(#ff0000, 40%);
+    }
+
+    &.warning {
+        color: #ffb032;
+        background-color: lighten(#ffb032, 40%);
+    }
+
+    &.info {
+        color: #0000bb;
+        background-color: lighten(#0000bb, 40%);
+    }
+}

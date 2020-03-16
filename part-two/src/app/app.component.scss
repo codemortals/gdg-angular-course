@@ -1,0 +1,24 @@
+h1 {
+    color: orange;
+    font-weight: 700;
+}
+
+.wrapper {
+    margin: 2em;
+}
+
+mat-toolbar {
+    display: flex;
+
+    > * {
+        flex: 0;
+    }
+
+    .nav-space {
+        flex: 1;
+    }
+
+    a {
+        padding: 1em;
+    }
+}

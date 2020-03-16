@@ -1,0 +1,12 @@
+<p>{{ title }}</p>
+<p>{{ date | date:'medium' }}</p>
+
+<app-alert severity="error">First Message</app-alert>
+<app-alert severity="warning">Second Message</app-alert>
+<app-alert>Third Message</app-alert>
+
+<button mat-raised-button (click)="toggleContent()" color="primary">{{ showContent ? 'Hide' : 'Show' }} Content</button>
+
+<div *ngIf="showContent">
+    <p>This content is hidden</p>
+</div>
