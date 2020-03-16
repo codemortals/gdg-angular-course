@@ -2,16 +2,19 @@
 <h1>Hello GDG Cloud London</h1>
 
 <form [formGroup]="addForm" (submit)="addName()">
-    <label for="name">Name</label>
-    <input id="name" type="text" formControlName="name">
+    <mat-form-field>
+      <mat-label for="name">Name</mat-label>
+      <input matInput placeholder="Example Eddie" id="name" type="text" formControlName="name">
+    </mat-form-field>
 
     <button mat-button type="submit" [disabled]="addForm.invalid">Add</button>
 </form>
 
 <form [formGroup]="searchForm">
-
-    <label for="search">Search</label>
-    <input id="search" type="text" formControlName="search">
+    <mat-form-field class="example-full-width">
+      <mat-label for="search">Search</mat-label>
+      <input matInput placeholder="Example CodeMortals" id="search" type="text" formControlName="search">
+    </mat-form-field>
 </form>
 
 <mat-list>

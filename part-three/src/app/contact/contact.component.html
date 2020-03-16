@@ -1,1 +1,33 @@
-<p>contact works!</p>
+<h1>Send us a message</h1>
+
+<form [formGroup]="contactForm" (submit)="sendMessage()">
+
+    <mat-form-field>
+        <mat-label for="name">Name</mat-label>
+        <input matInput id="name" type="text" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="email">Email</mat-label>
+        <input matInput id="email" type="text" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="phone">Phone</mat-label>
+        <input matInput id="phone" type="phone" formControlName="phone">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="reason">Reason</mat-label>
+        <input matInput id="reason" type="text" formControlName="reason">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="message">Message</mat-label>
+        <textarea matInput id="message" formControlName="name" rows="8"></textarea>
+    </mat-form-field>
+
+    <div>
+        <button mat-raised-button type="submit" color="primary">Send Message</button>
+    </div>
+</form>
