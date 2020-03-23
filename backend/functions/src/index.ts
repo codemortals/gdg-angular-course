@@ -9,6 +9,8 @@ export const sendMessage = functions.https.onRequest((request, response) => {
     const expectedBody = [ 'name', 'email', 'message' ];
     const body = JSON.parse(Buffer.from(request.rawBody).toString());
 
+    response.set('Access-Control-Allow-Origin', '*');
+
     const errors = expectedBody.filter((field) => Object.keys(body).includes(field) !== true);
     if (errors.length) {
         return response.status(400).send({ result: 'warning', message: 'missing fields', details: errors });
